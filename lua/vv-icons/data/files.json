@@ -1,0 +1,292 @@
+[
+  {
+    "match": "AGENTS.md",
+    "glyph": "",
+    "color": "orange"
+  },
+  {
+    "match": "README{,.en,.zh,.zh-CN,.zh-TW,.ja,.ko,-en,-zh,-zh-CN,-zh-TW,-ja,-ko}.md",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": "{CONTRIBUTING,CODE_OF_CONDUCT,SECURITY}{,.md}",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": "{LICENSE,LICENCE}{,.md,.txt}",
+    "glyph": "",
+    "color": "yellow"
+  },
+  {
+    "match": "package.json",
+    "glyph": "",
+    "color": "green"
+  },
+  {
+    "match": "package-lock.json",
+    "glyph": "",
+    "color": "white"
+  },
+  {
+    "match": "yarn.lock",
+    "glyph": "",
+    "color": "cyan"
+  },
+  {
+    "match": "bun.lock{,b}",
+    "glyph": "",
+    "color": "yellow"
+  },
+  {
+    "match": "pnpm-lock.yaml",
+    "glyph": "",
+    "color": "yellow"
+  },
+  {
+    "match": "pnpm-workspace.yaml",
+    "glyph": "",
+    "color": "yellow"
+  },
+  {
+    "match": "{Cargo,Gemfile,poetry}.lock",
+    "glyph": "",
+    "color": "white"
+  },
+  {
+    "match": "tsconfig{,.app,.node,.build,.base,.test,.eslint,.vitest}.json",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": "turbo.json",
+    "glyph": "󱀚",
+    "color": "red"
+  },
+  {
+    "match": "biome.json{,c}",
+    "glyph": "󰷡",
+    "color": "green"
+  },
+  {
+    "match": "vite.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "yellow"
+  },
+  {
+    "match": "tailwind.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "󱏿",
+    "color": "cyan"
+  },
+  {
+    "match": "vitest.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "green"
+  },
+  {
+    "match": "next.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "yellow"
+  },
+  {
+    "match": "nuxt.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "󱄆",
+    "color": "green"
+  },
+  {
+    "match": "jest.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "webpack.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": "rollup.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "playwright.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "green"
+  },
+  {
+    "match": "postcss.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "babel.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "󰨥",
+    "color": "yellow"
+  },
+  {
+    "match": ".babelrc{,.js,.cjs,.mjs,.json}",
+    "glyph": "󰨥",
+    "color": "yellow"
+  },
+  {
+    "match": "eslint.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "purple"
+  },
+  {
+    "match": ".eslintrc{,.js,.cjs,.mjs,.json,.yml,.yaml}",
+    "glyph": "",
+    "color": "purple"
+  },
+  {
+    "match": ".eslintignore",
+    "glyph": "",
+    "color": "purple"
+  },
+  {
+    "match": "prettier.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "cyan"
+  },
+  {
+    "match": ".prettierrc{,.json,.yml,.yaml,.js,.cjs,.mjs,.ts,.toml}",
+    "glyph": "󰎙",
+    "color": "cyan"
+  },
+  {
+    "match": ".prettierignore",
+    "glyph": "󰎙",
+    "color": "cyan"
+  },
+  {
+    "match": ".env{,.local,.development,.production,.test,.staging}",
+    "glyph": "",
+    "color": "yellow"
+  },
+  {
+    "match": ".env.example",
+    "glyph": "",
+    "color": "grey"
+  },
+  {
+    "match": ".git{ignore,attributes,modules,keep}",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "Dockerfile",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": "{docker-compose,compose}.{yml,yaml}",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": ".dockerignore",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": "Makefile",
+    "glyph": "",
+    "color": "grey"
+  },
+  {
+    "match": "{justfile,CMakeLists.txt}",
+    "glyph": "",
+    "color": "white"
+  },
+  {
+    "match": ".{bashrc,bash_profile,bash_logout,zshrc,zprofile,zshenv,zlogin}",
+    "glyph": "",
+    "color": "green"
+  },
+  {
+    "match": "Procfile",
+    "glyph": "",
+    "color": "green"
+  },
+  {
+    "match": "Rakefile",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "Gemfile",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "Cargo.toml",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "go.{mod,sum}",
+    "glyph": "",
+    "color": "cyan"
+  },
+  {
+    "match": "pubspec.yaml",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": "composer.json",
+    "glyph": "",
+    "color": "magenta"
+  },
+  {
+    "match": "pyproject.toml",
+    "glyph": "",
+    "color": "yellow"
+  },
+  {
+    "match": "requirements.txt",
+    "glyph": "",
+    "color": "yellow"
+  },
+  {
+    "match": ".editorconfig",
+    "glyph": "",
+    "color": "grey"
+  },
+  {
+    "match": ".tool-versions",
+    "glyph": "",
+    "color": "magenta"
+  },
+  {
+    "match": ".{nvmrc,node-version}",
+    "glyph": "󰎙",
+    "color": "green"
+  },
+  {
+    "match": ".npmrc",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": ".yarnrc{,.yml}",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": ".cursorignore",
+    "glyph": "",
+    "color": "white"
+  },
+  {
+    "match": ".ruby-version",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": ".python-version",
+    "glyph": "",
+    "color": "green"
+  }
+]

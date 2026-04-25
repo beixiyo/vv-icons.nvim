@@ -1,0 +1,38 @@
+{
+  "git_log": {
+    "glyph": "󰴂",
+    "color": "cyan"
+  },
+  "git_branches": {
+    "glyph": "󰘬",
+    "color": "orange"
+  },
+  "git_added": {
+    "glyph": "",
+    "color": "green"
+  },
+  "git_modified": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "git_removed": {
+    "glyph": "",
+    "color": "red"
+  },
+  "git_files": {
+    "glyph": "󰊢",
+    "color": "orange"
+  },
+  "git_status": {
+    "glyph": "󰊢",
+    "color": "orange"
+  },
+  "git_stash": {
+    "glyph": "󰆍",
+    "color": "purple"
+  },
+  "git_diff": {
+    "glyph": "󰩻",
+    "color": "blue"
+  }
+}

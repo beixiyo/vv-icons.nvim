@@ -1,0 +1,310 @@
+{
+  "txt": {
+    "glyph": "󰊄",
+    "color": "blue"
+  },
+  "text": {
+    "glyph": "󰊄",
+    "color": "blue"
+  },
+  "md": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "markdown": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "mdx": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "pdf": {
+    "glyph": "",
+    "color": "red"
+  },
+  "doc": {
+    "glyph": "󰈬",
+    "color": "blue"
+  },
+  "docx": {
+    "glyph": "󰈬",
+    "color": "blue"
+  },
+  "xls": {
+    "glyph": "󰈛",
+    "color": "green"
+  },
+  "xlsx": {
+    "glyph": "󰈛",
+    "color": "green"
+  },
+  "ppt": {
+    "glyph": "󰈧",
+    "color": "red"
+  },
+  "pptx": {
+    "glyph": "󰈧",
+    "color": "red"
+  },
+  "png": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "jpg": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "jpeg": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "gif": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "webp": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "avif": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "ico": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "svg": {
+    "glyph": "󰜡",
+    "color": "magenta"
+  },
+  "wav": {
+    "glyph": "󰎇",
+    "color": "cyan"
+  },
+  "mp3": {
+    "glyph": "󰎇",
+    "color": "cyan"
+  },
+  "flac": {
+    "glyph": "󰎇",
+    "color": "cyan"
+  },
+  "aac": {
+    "glyph": "󰎇",
+    "color": "cyan"
+  },
+  "ogg": {
+    "glyph": "󰎇",
+    "color": "cyan"
+  },
+  "m4a": {
+    "glyph": "󰎇",
+    "color": "cyan"
+  },
+  "mp4": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "mov": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "avi": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "mkv": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "webm": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "mpeg": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "mpg": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "js": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "mjs": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "cjs": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "ts": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "mts": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "cts": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "jsx": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "tsx": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "py": {
+    "glyph": "",
+    "color": "green"
+  },
+  "rs": {
+    "glyph": "",
+    "color": "white"
+  },
+  "c": {
+    "glyph": "",
+    "color": "white"
+  },
+  "h": {
+    "glyph": "",
+    "color": "white"
+  },
+  "cpp": {
+    "glyph": "",
+    "color": "white"
+  },
+  "cc": {
+    "glyph": "",
+    "color": "white"
+  },
+  "cxx": {
+    "glyph": "",
+    "color": "white"
+  },
+  "hpp": {
+    "glyph": "",
+    "color": "white"
+  },
+  "hxx": {
+    "glyph": "",
+    "color": "white"
+  },
+  "cs": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "go": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "java": {
+    "glyph": "",
+    "color": "red"
+  },
+  "json": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "jsonc": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "json5": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "sh": {
+    "glyph": "",
+    "color": "green"
+  },
+  "bash": {
+    "glyph": "󱆃",
+    "color": "green"
+  },
+  "zsh": {
+    "glyph": "",
+    "color": "green"
+  },
+  "fish": {
+    "glyph": "",
+    "color": "green"
+  },
+  "ksh": {
+    "glyph": "",
+    "color": "green"
+  },
+  "csh": {
+    "glyph": "",
+    "color": "green"
+  },
+  "yml": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "yaml": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "env": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "html": {
+    "glyph": "",
+    "color": "red"
+  },
+  "htm": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "css": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "less": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "scss": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "sass": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "toml": {
+    "glyph": "",
+    "color": "white"
+  },
+  "xml": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "sql": {
+    "glyph": "",
+    "color": "cyan"
+  },
+  "lock": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "lua": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "log": {
+    "glyph": "",
+    "color": "yellow"
+  }
+}

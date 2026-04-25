@@ -1,0 +1,186 @@
+{
+  "clock": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "words": {
+    "glyph": "",
+    "color": "cyan"
+  },
+  "cursor": {
+    "glyph": "󰇀",
+    "color": "orange"
+  },
+  "arrow_right": {
+    "glyph": "󰁔",
+    "color": "grey"
+  },
+  "arrow_up": {
+    "glyph": "󰁑",
+    "color": "grey"
+  },
+  "arrow_down": {
+    "glyph": "󰁐",
+    "color": "grey"
+  },
+  "lsp": {
+    "glyph": "󰘦",
+    "color": "blue"
+  },
+  "window": {
+    "glyph": "󱂬",
+    "color": "blue"
+  },
+  "move_down": {
+    "glyph": "󰁐",
+    "color": "grey"
+  },
+  "move_up": {
+    "glyph": "󰁑",
+    "color": "grey"
+  },
+  "prev": {
+    "glyph": "󰁍",
+    "color": "grey"
+  },
+  "quit": {
+    "glyph": "",
+    "color": "red"
+  },
+  "code": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "save": {
+    "glyph": "󰆓",
+    "color": "green"
+  },
+  "exit_insert": {
+    "glyph": "󰩟",
+    "color": "orange"
+  },
+  "commands": {
+    "glyph": "󰘳",
+    "color": "blue"
+  },
+  "command_history": {
+    "glyph": "󰇚",
+    "color": "grey"
+  },
+  "registers": {
+    "glyph": "󰱼",
+    "color": "purple"
+  },
+  "marks": {
+    "glyph": "󰆤",
+    "color": "yellow"
+  },
+  "jumps": {
+    "glyph": "󰘈",
+    "color": "cyan"
+  },
+  "keymaps": {
+    "glyph": "󰌌",
+    "color": "blue"
+  },
+  "copy": {
+    "glyph": "󰅌",
+    "color": "blue"
+  },
+  "dap_status": {
+    "glyph": "",
+    "color": "red"
+  },
+  "fix": {
+    "glyph": "󰁨",
+    "color": "yellow"
+  },
+  "next": {
+    "glyph": "󰁔",
+    "color": "grey"
+  },
+  "arrow_left": {
+    "glyph": "󰁍",
+    "color": "grey"
+  },
+  "find_file": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "message": {
+    "glyph": "󰍩",
+    "color": "cyan"
+  },
+  "new_file": {
+    "glyph": "󰈔",
+    "color": "green"
+  },
+  "markdown": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "debug": {
+    "glyph": "",
+    "color": "red"
+  },
+  "recent_files": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "session": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "find_text": {
+    "glyph": "",
+    "color": "cyan"
+  },
+  "terminal": {
+    "glyph": "󰆍",
+    "color": "green"
+  },
+  "config": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "config_files": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "tools": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "buffers": {
+    "glyph": "󰈙",
+    "color": "blue"
+  },
+  "rename": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "explorer": {
+    "glyph": "󰉓",
+    "color": "yellow"
+  },
+  "list": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "vscode": {
+    "glyph": "󰨞",
+    "color": "blue"
+  },
+  "fold_open": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "fold_closed": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "regex": {
+    "glyph": "",
+    "color": "green"
+  }
+}
