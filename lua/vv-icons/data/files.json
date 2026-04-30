@@ -80,6 +80,11 @@
     "color": "cyan"
   },
   {
+    "match": "tailwind.{css,scss,less}",
+    "glyph": "󱏿",
+    "color": "cyan"
+  },
+  {
     "match": "vitest.config.{cjs,mjs,js,cts,mts,ts}",
     "glyph": "",
     "color": "green"
