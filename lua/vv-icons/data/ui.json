@@ -182,5 +182,13 @@
   "regex": {
     "glyph": "",
     "color": "green"
+  },
+  "split_horizontal": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "split_vertical": {
+    "glyph": "",
+    "color": "blue"
   }
 }
