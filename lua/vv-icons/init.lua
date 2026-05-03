@@ -7,7 +7,10 @@
 --   3. 原始 {glyph,hl} 表：icons.raw.<name>
 --   4. mini.icons setup 直接吃的字典：icons.files / icons.directories / icons.extensions / icons.filetypes
 
+---@alias VVIconCategory 'file'|'directory'|'extension'|'filetype'|'ui'|'git'|'diagnostics'|'kinds'
+
 ---@class VVIcons
+---@field get fun(category: VVIconCategory, name: string): string?, string?, boolean
 ---@field ns { ui: table<string,string>, git: table<string,string>, diagnostics: table<string,string>, kinds: table<string,string> }
 ---@field raw { ui: table<string,VVIconEntry>, git: table<string,VVIconEntry>, diagnostics: table<string,VVIconEntry>, kinds: table<string,VVIconEntry> }
 ---@field files table<string, VVIconEntry>
@@ -65,5 +68,36 @@ M.files       = L.load_files("files")
 M.directories = L.load_directories("directories")
 M.extensions  = L.load_dict("extensions")
 M.filetypes   = L.load_dict("filetypes")
+
+local MI_CATEGORIES = { file = true, directory = true, extension = true, filetype = true }
+
+--- 统一查询入口，返回值对齐 MiniIcons.get()
+---@param category VVIconCategory
+---@param name string
+---@return string? icon, string? hl, boolean is_default
+function M.get(category, name)
+  local raw_tbl = M.raw[category]
+  if raw_tbl then
+    local entry = raw_tbl[name]
+    if entry then return entry.glyph, entry.hl, false end
+    return nil, nil, true
+  end
+
+  if MI_CATEGORIES[category] then
+    local mi = _G.MiniIcons
+    if mi then
+      local icon, hl, is_default = mi.get(category, name)
+      if not is_default then return icon, hl, false end
+      local lower = name:lower()
+      if lower ~= name then
+        icon, hl, is_default = mi.get(category, lower)
+        if not is_default then return icon, hl, false end
+      end
+      return icon, hl, true
+    end
+  end
+
+  return nil, nil, true
+end
 
 return M
