@@ -190,5 +190,13 @@
   "split_vertical": {
     "glyph": "",
     "color": "blue"
+  },
+  "clipboard_cut": {
+    "glyph": "󰆐",
+    "color": "red"
+  },
+  "clipboard_copy": {
+    "glyph": "󰆏",
+    "color": "blue"
   }
 }

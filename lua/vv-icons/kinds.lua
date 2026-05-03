@@ -1,7 +1,6 @@
 -- LSP CompletionItemKind 图标
--- 使用 VSCode Codicons（nf-cod-symbol_*），完全对应 VSCode 编辑器原生补全图标
--- 参考：https://microsoft.github.io/vscode-codicons/
-return {
+---@type table<string, VVIconEntry>
+local M = {
   Text          = { glyph = '', hl = 'MiniIconsGrey' },
   Method        = { glyph = '', hl = 'MiniIconsPurple' },
   Function      = { glyph = '', hl = 'MiniIconsPurple' },
@@ -40,3 +39,5 @@ return {
   String        = { glyph = '', hl = 'MiniIconsGreen' },
   Supermaven    = { glyph = '󱐗', hl = 'MiniIconsGreen' },
 }
+
+return M

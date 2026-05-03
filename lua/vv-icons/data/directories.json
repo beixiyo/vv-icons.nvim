@@ -1,645 +1,436 @@
-{
-  "charts": {
+[
+  {
+    "match": "charts",
     "glyph": "",
     "color": "green"
   },
-  "locale": {
+  {
+    "match": "{i18n,lang,locale,locales,translations}",
     "glyph": "",
     "color": "blue"
   },
-  "test": {
+  {
+    "match": "{__test__,__tests__,cypress,e2e,spec,specs,test,tests}",
     "glyph": "",
     "color": "green"
   },
-  "tests": {
-    "glyph": "",
-    "color": "green"
-  },
-  "ui": {
+  {
+    "match": "ui",
     "glyph": "",
     "color": "purple"
   },
-  "context": {
+  {
+    "match": "{context,data,database,db,fixtures,migrations,models,seeders,seeds,state}",
     "glyph": "",
     "color": "green"
   },
-  "source": {
+  {
+    "match": "source",
     "glyph": "",
     "color": "blue"
   },
-  "config": {
+  {
+    "match": "{config,configs,settings}",
     "glyph": "",
     "color": "grey"
   },
-  "tools": {
+  {
+    "match": "{helper,helpers,mocks,tools,util,utils}",
     "glyph": "",
     "color": "yellow"
   },
-  "out": {
+  {
+    "match": "{build,dist,out,output}",
     "glyph": "",
     "color": "grey"
   },
-  "extensions": {
+  {
+    "match": "{extensions,plugins}",
     "glyph": "",
     "color": "purple"
   },
-  "output": {
-    "glyph": "",
-    "color": "grey"
-  },
-  "server": {
+  {
+    "match": "{backend,server}",
     "glyph": "",
     "color": "green"
   },
-  "fixtures": {
-    "glyph": "",
-    "color": "green"
-  },
-  "uploads": {
+  {
+    "match": "uploads",
     "glyph": "",
     "color": "yellow"
   },
-  "downloads": {
+  {
+    "match": "downloads",
     "glyph": "",
     "color": "yellow"
   },
-  "dist": {
-    "glyph": "",
-    "color": "grey"
-  },
-  ".github": {
+  {
+    "match": ".github",
     "glyph": "",
     "color": "grey"
   },
-  ".vscode": {
+  {
+    "match": ".vscode",
     "glyph": "",
     "color": "blue"
   },
-  "database": {
-    "glyph": "",
-    "color": "green"
-  },
-  "build": {
-    "glyph": "",
-    "color": "grey"
-  },
-  "examples": {
+  {
+    "match": "{demo,demos,example,examples}",
     "glyph": "",
     "color": "yellow"
   },
-  "bin": {
+  {
+    "match": "bin",
     "glyph": "",
     "color": "grey"
   },
-  "routes": {
+  {
+    "match": "{router,routes}",
     "glyph": "󰑪",
     "color": "blue"
   },
-  "workflows": {
+  {
+    "match": "{actions,workflows}",
     "glyph": "",
     "color": "blue"
   },
-  "android": {
+  {
+    "match": "android",
     "glyph": "",
     "color": "green"
   },
-  "http": {
+  {
+    "match": "{http,public,static,web}",
     "glyph": "",
     "color": "cyan"
   },
-  "data": {
-    "glyph": "",
-    "color": "green"
-  },
-  "plugins": {
-    "glyph": "",
-    "color": "purple"
-  },
-  "__tests__": {
-    "glyph": "",
-    "color": "green"
-  },
-  "__test__": {
-    "glyph": "",
-    "color": "green"
-  },
-  "spec": {
-    "glyph": "",
-    "color": "green"
-  },
-  "specs": {
-    "glyph": "",
-    "color": "green"
-  },
-  "cypress": {
-    "glyph": "",
-    "color": "green"
-  },
-  "e2e": {
-    "glyph": "",
-    "color": "green"
-  },
-  "coverage": {
+  {
+    "match": "coverage",
     "glyph": "",
     "color": "yellow"
   },
-  "docs": {
+  {
+    "match": "{doc,docs,documentation}",
     "glyph": "",
     "color": "blue"
   },
-  "lib": {
+  {
+    "match": "{lib,libs}",
     "glyph": "",
     "color": "blue"
   },
-  "doc": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "libs": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "app": {
+  {
+    "match": "app",
     "glyph": "",
     "color": "blue"
   },
-  "example": {
-    "glyph": "",
-    "color": "yellow"
-  },
-  "core": {
+  {
+    "match": "core",
     "glyph": "",
     "color": "blue"
   },
-  "demos": {
-    "glyph": "",
-    "color": "yellow"
-  },
-  "common": {
+  {
+    "match": "{blocks,common,components,comps,shared,widgets}",
     "glyph": "",
     "color": "blue"
   },
-  "mobile": {
+  {
+    "match": "mobile",
     "glyph": "",
     "color": "cyan"
   },
-  "shared": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "target": {
+  {
+    "match": "target",
     "glyph": "",
     "color": "grey"
   },
-  "widgets": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "frontend": {
+  {
+    "match": "{client,frontend}",
     "glyph": "",
     "color": "cyan"
   },
-  "cache": {
+  {
+    "match": "{.cache,cache}",
     "glyph": "",
     "color": "orange"
   },
-  ".next": {
+  {
+    "match": ".next",
     "glyph": "",
     "color": "grey"
   },
-  "client": {
-    "glyph": "",
-    "color": "cyan"
-  },
-  ".nuxt": {
+  {
+    "match": ".nuxt",
     "glyph": "",
     "color": "grey"
   },
-  "backend": {
-    "glyph": "",
-    "color": "green"
-  },
-  ".turbo": {
+  {
+    "match": ".turbo",
     "glyph": "",
     "color": "grey"
   },
-  "tmp": {
+  {
+    "match": "{temp,tmp}",
     "glyph": "",
     "color": "grey"
   },
-  ".cache": {
-    "glyph": "",
-    "color": "orange"
-  },
-  "api": {
+  {
+    "match": "api",
     "glyph": "󱂛",
     "color": "cyan"
   },
-  "packages": {
+  {
+    "match": "{packages,pkg}",
     "glyph": "󱧕",
     "color": "red"
   },
-  "web": {
-    "glyph": "",
-    "color": "cyan"
-  },
-  "pkg": {
-    "glyph": "󱧕",
-    "color": "red"
-  },
-  "modules": {
+  {
+    "match": "modules",
     "glyph": "",
     "color": "red"
   },
-  "components": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "comps": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "pages": {
+  {
+    "match": "pages",
     "glyph": "",
     "color": "blue"
   },
-  "vendor": {
+  {
+    "match": "{vendor,vendors}",
     "glyph": "",
     "color": "grey"
   },
-  "vendors": {
-    "glyph": "",
-    "color": "grey"
-  },
-  "node_modules": {
+  {
+    "match": "node_modules",
     "glyph": "",
     "color": "green"
   },
-  "layouts": {
+  {
+    "match": "{layout,layouts}",
     "glyph": "",
     "color": "blue"
   },
-  "ci": {
+  {
+    "match": "{ci,controllers,handlers}",
     "glyph": "",
     "color": "blue"
   },
-  "layout": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "actions": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "docker": {
+  {
+    "match": "{.devcontainer,docker}",
     "glyph": "",
     "color": "blue"
   },
-  "features": {
+  {
+    "match": "features",
     "glyph": "",
     "color": "blue"
   },
-  "k8s": {
+  {
+    "match": "{k8s,kubernetes}",
     "glyph": "󱃂",
     "color": "blue"
   },
-  "kubernetes": {
-    "glyph": "󱃂",
-    "color": "blue"
-  },
-  "terraform": {
+  {
+    "match": "terraform",
     "glyph": "󱁤",
     "color": "purple"
   },
-  "router": {
-    "glyph": "󰑪",
-    "color": "blue"
-  },
-  "nginx": {
+  {
+    "match": "nginx",
     "glyph": "",
     "color": "green"
   },
-  "rest": {
+  {
+    "match": "{grpc,rest}",
     "glyph": "",
     "color": "cyan"
   },
-  "deploy": {
+  {
+    "match": "deploy",
     "glyph": "",
     "color": "blue"
   },
-  "graphql": {
+  {
+    "match": "graphql",
     "glyph": "",
     "color": "purple"
   },
-  "logs": {
+  {
+    "match": "{log,logs}",
     "glyph": "",
     "color": "orange"
   },
-  "grpc": {
-    "glyph": "",
-    "color": "cyan"
-  },
-  "temp": {
-    "glyph": "",
-    "color": "grey"
-  },
-  "controllers": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "storage": {
+  {
+    "match": "storage",
     "glyph": "",
     "color": "yellow"
   },
-  "middlewares": {
+  {
+    "match": "{middleware,middlewares,workers}",
     "glyph": "",
     "color": "orange"
   },
-  "middleware": {
-    "glyph": "",
-    "color": "orange"
-  },
-  "models": {
-    "glyph": "",
-    "color": "green"
-  },
-  "static": {
-    "glyph": "",
-    "color": "cyan"
-  },
-  "services": {
+  {
+    "match": "services",
     "glyph": "",
     "color": "blue"
   },
-  "public": {
-    "glyph": "",
-    "color": "cyan"
-  },
-  "handlers": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "listeners": {
+  {
+    "match": "listeners",
     "glyph": "",
     "color": "orange"
   },
-  ".gitlab": {
+  {
+    "match": ".gitlab",
     "glyph": "",
     "color": "red"
   },
-  "events": {
+  {
+    "match": "events",
     "glyph": "",
     "color": "orange"
   },
-  "jobs": {
+  {
+    "match": "jobs",
     "glyph": "",
     "color": "orange"
   },
-  "tasks": {
+  {
+    "match": "tasks",
     "glyph": "",
     "color": "orange"
   },
-  ".claude": {
+  {
+    "match": ".claude",
     "glyph": "󰚩",
     "color": "orange"
   },
-  "queues": {
+  {
+    "match": "queues",
     "glyph": "",
     "color": "orange"
   },
-  "workers": {
-    "glyph": "",
-    "color": "orange"
-  },
-  "hooks": {
+  {
+    "match": "hooks",
     "glyph": "󰛢",
     "color": "cyan"
   },
-  "ios": {
+  {
+    "match": "ios",
     "glyph": "",
     "color": "grey"
   },
-  "stores": {
+  {
+    "match": "{store,stores}",
     "glyph": "",
     "color": "green"
   },
-  "types": {
+  {
+    "match": "{interfaces,types,typings}",
     "glyph": "",
     "color": "purple"
   },
-  "store": {
-    "glyph": "",
-    "color": "green"
-  },
-  "state": {
-    "glyph": "",
-    "color": "green"
-  },
-  "providers": {
+  {
+    "match": "providers",
     "glyph": "",
     "color": "green"
   },
-  "src": {
+  {
+    "match": "src",
     "color": "purple"
   },
-  "composables": {
+  {
+    "match": "composables",
     "glyph": "",
     "color": "cyan"
   },
-  "utils": {
-    "glyph": "",
-    "color": "yellow"
-  },
-  "util": {
-    "glyph": "",
-    "color": "yellow"
-  },
-  "helpers": {
-    "glyph": "",
-    "color": "yellow"
-  },
-  "helper": {
-    "glyph": "",
-    "color": "yellow"
-  },
-  "desktop": {
+  {
+    "match": "desktop",
     "glyph": "",
     "color": "cyan"
   },
-  "typings": {
-    "glyph": "",
-    "color": "purple"
-  },
-  "interfaces": {
-    "glyph": "",
-    "color": "purple"
-  },
-  "schemas": {
+  {
+    "match": "{schema,schemas}",
     "glyph": "",
     "color": "purple"
   },
-  "schema": {
-    "glyph": "",
-    "color": "purple"
-  },
-  "styles": {
+  {
+    "match": "{css,style,styles}",
     "glyph": "",
     "color": "blue"
   },
-  "lang": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "style": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "css": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "scss": {
+  {
+    "match": "scss",
     "glyph": "",
     "color": "purple"
   },
-  "themes": {
+  {
+    "match": "{theme,themes}",
     "glyph": "",
     "color": "purple"
   },
-  "documentation": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "theme": {
-    "glyph": "",
-    "color": "purple"
-  },
-  "assets": {
+  {
+    "match": "{assets,image,images,img,imgs}",
     "glyph": "",
     "color": "cyan"
   },
-  ".idea": {
+  {
+    "match": ".idea",
     "glyph": "",
     "color": "grey"
   },
-  ".husky": {
+  {
+    "match": ".husky",
     "glyph": "",
     "color": "grey"
   },
-  ".circleci": {
+  {
+    "match": ".circleci",
     "glyph": "",
     "color": "green"
   },
-  ".devcontainer": {
-    "glyph": "",
-    "color": "blue"
-  },
-  ".git": {
+  {
+    "match": ".git",
     "glyph": "",
     "color": "red"
   },
-  "svg": {
+  {
+    "match": "{svg,svgs}",
     "glyph": "󰜡",
     "color": "cyan"
   },
-  "svgs": {
-    "glyph": "󰜡",
-    "color": "cyan"
-  },
-  "img": {
-    "glyph": "",
-    "color": "cyan"
-  },
-  "imgs": {
-    "glyph": "",
-    "color": "cyan"
-  },
-  "image": {
-    "glyph": "",
-    "color": "cyan"
-  },
-  "images": {
-    "glyph": "",
-    "color": "cyan"
-  },
-  "icons": {
+  {
+    "match": "icons",
     "glyph": "",
     "color": "yellow"
   },
-  "log": {
-    "glyph": "",
-    "color": "orange"
-  },
-  "fonts": {
+  {
+    "match": "fonts",
     "glyph": "",
     "color": "red"
   },
-  "scripts": {
+  {
+    "match": "scripts",
     "glyph": "",
     "color": "green"
   },
-  "views": {
+  {
+    "match": "views",
     "glyph": "",
     "color": "blue"
   },
-  "i18n": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "blocks": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "locales": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "translations": {
-    "glyph": "",
-    "color": "blue"
-  },
-  "configs": {
-    "glyph": "",
-    "color": "grey"
-  },
-  "settings": {
-    "glyph": "",
-    "color": "grey"
-  },
-  "demo": {
-    "glyph": "",
-    "color": "yellow"
-  },
-  "env": {
+  {
+    "match": "env",
     "glyph": "",
     "color": "yellow"
   },
-  "db": {
-    "glyph": "",
-    "color": "green"
-  },
-  "migrations": {
-    "glyph": "",
-    "color": "green"
-  },
-  "seeders": {
-    "glyph": "",
-    "color": "green"
-  },
-  "seeds": {
-    "glyph": "",
-    "color": "green"
-  },
-  "queries": {
+  {
+    "match": "queries",
     "glyph": "",
     "color": "green"
   },
-  "proto": {
+  {
+    "match": "proto",
     "glyph": "󰿘",
     "color": "grey"
-  },
-  "mocks": {
-    "glyph": "",
-    "color": "yellow"
   }
-}
+]

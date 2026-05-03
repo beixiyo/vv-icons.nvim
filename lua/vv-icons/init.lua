@@ -7,6 +7,15 @@
 --   3. 原始 {glyph,hl} 表：icons.raw.<name>
 --   4. mini.icons setup 直接吃的字典：icons.files / icons.directories / icons.extensions / icons.filetypes
 
+---@class VVIcons
+---@field ns { ui: table<string,string>, git: table<string,string>, diagnostics: table<string,string>, kinds: table<string,string> }
+---@field raw { ui: table<string,VVIconEntry>, git: table<string,VVIconEntry>, diagnostics: table<string,VVIconEntry>, kinds: table<string,VVIconEntry> }
+---@field files table<string, VVIconEntry>
+---@field directories table<string, VVIconEntry>
+---@field extensions table<string, VVIconEntry>
+---@field filetypes table<string, VVIconEntry>
+---@field [string] string
+
 local L = require("vv-icons.loader")
 
 local ui_raw          = L.load_dict("ui")
@@ -14,7 +23,8 @@ local git_raw         = L.load_dict("git")
 local diagnostics_raw = require("vv-icons.diagnostics")
 local kinds_raw       = require("vv-icons.kinds")
 
--- { key = { glyph, hl } } → { key = glyph }
+---@param tbl table<string, VVIconEntry>
+---@return table<string, string>
 local function flatten(tbl)
   local out = {}
   for k, v in pairs(tbl) do
@@ -28,6 +38,7 @@ local git         = flatten(git_raw)
 local diagnostics = flatten(diagnostics_raw)
 local kinds       = flatten(kinds_raw)
 
+---@type VVIcons
 local M = {}
 
 M.ns = {
@@ -51,7 +62,7 @@ M.raw = {
 
 -- mini.icons 字典（原样 {glyph,hl} 结构）
 M.files       = L.load_files("files")
-M.directories = L.load_dict("directories")
+M.directories = L.load_directories("directories")
 M.extensions  = L.load_dict("extensions")
 M.filetypes   = L.load_dict("filetypes")
 

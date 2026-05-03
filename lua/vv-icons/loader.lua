@@ -2,6 +2,11 @@
 -- 消费方：`require('vv-icons.loader').load_dict('git')`
 -- 数据目录：<plugin_root>/lua/vv-icons/data/*.json（与 zsh/bun 侧共用同一份 JSON）
 
+---@class VVIconEntry
+---@field glyph? string
+---@field hl? string
+
+---@class VVIconsLoader
 local M = {}
 
 -- 动态定位 data/ 目录：基于当前文件（loader.lua）的实际路径推导
@@ -22,6 +27,8 @@ local COLOR_TO_HL = {
   white   = 'MiniIconsAzure',
 }
 
+---@param color string
+---@return string hl
 local function color_to_hl(color)
   return COLOR_TO_HL[color] or 'MiniIconsGrey'
 end
@@ -100,9 +107,9 @@ end
 
 --- 字典型 JSON → { key = { glyph?, hl? } }
 --- 偏字段覆盖：JSON 里省略 glyph 只填 color → MiniIcons 保留默认 glyph 仅改色
---- 适用 git / ui / diagnostics / extensions / filetypes / directories
+--- 适用 git / ui / diagnostics / extensions / filetypes
 ---@param name string
----@return table<string, { glyph?: string, hl?: string }>
+---@return table<string, VVIconEntry>
 function M.load_dict(name)
   local raw = read_json(name)
   local out = {}
@@ -118,7 +125,7 @@ end
 --- 列表型 JSON + glob 展开 → { [literal_name] = { glyph, hl } }
 --- 命中顺序：后出现的同名条目会覆盖先出现的（列表顺序即优先级，列表头优先）
 ---@param name string
----@return table<string, { glyph: string, hl: string }>
+---@return table<string, VVIconEntry>
 function M.load_files(name)
   local raw = read_json(name)
   local out = {}
@@ -129,6 +136,26 @@ function M.load_files(name)
       out[literal] = value
     end
   end
+  return out
+end
+
+--- 目录专用：load_files + 自动生成单复数变体
+--- 'test' 自动补 'tests'，'docs' 自动补 'doc'（已有则不覆盖）
+---@param name string
+---@return table<string, VVIconEntry>
+function M.load_directories(name)
+  local out = M.load_files(name)
+  local extras = {}
+  for key, value in pairs(out) do
+    if key:sub(-1) == 's' and key:sub(-2) ~= 'ss' and #key > 3 then
+      local singular = key:sub(1, -2)
+      if not out[singular] then extras[singular] = value end
+    else
+      local plural = key .. 's'
+      if not out[plural] then extras[plural] = value end
+    end
+  end
+  for k, v in pairs(extras) do out[k] = v end
   return out
 end
 
