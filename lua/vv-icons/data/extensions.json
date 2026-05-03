@@ -306,5 +306,401 @@
   "log": {
     "glyph": "",
     "color": "yellow"
+  },
+  "rb": {
+    "glyph": "",
+    "color": "red"
+  },
+  "php": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "swift": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "kt": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "kts": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "scala": {
+    "glyph": "",
+    "color": "red"
+  },
+  "sc": {
+    "glyph": "",
+    "color": "red"
+  },
+  "r": {
+    "glyph": "󰟔",
+    "color": "blue"
+  },
+  "dart": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "zig": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "nim": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "hs": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "lhs": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "ex": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "exs": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "erl": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "hrl": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "clj": {
+    "glyph": "",
+    "color": "green"
+  },
+  "cljs": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "cljc": {
+    "glyph": "",
+    "color": "green"
+  },
+  "elm": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "jl": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "vue": {
+    "glyph": "",
+    "color": "green"
+  },
+  "svelte": {
+    "glyph": "",
+    "color": "red"
+  },
+  "astro": {
+    "glyph": "",
+    "color": "red"
+  },
+  "coffee": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "vim": {
+    "glyph": "",
+    "color": "green"
+  },
+  "d": {
+    "glyph": "",
+    "color": "red"
+  },
+  "nix": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "ml": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "mli": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "fs": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "fsx": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "pl": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "pm": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "cr": {
+    "glyph": "",
+    "color": "white"
+  },
+  "wasm": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "sol": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "prisma": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "tf": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "tfvars": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "gradle": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "ps1": {
+    "glyph": "󰨊",
+    "color": "blue"
+  },
+  "ipynb": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "gleam": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "odin": {
+    "glyph": "󰟢",
+    "color": "blue"
+  },
+  "nu": {
+    "glyph": "",
+    "color": "green"
+  },
+  "fnl": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "res": {
+    "glyph": "",
+    "color": "red"
+  },
+  "resi": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "hbs": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "ejs": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "erb": {
+    "glyph": "",
+    "color": "red"
+  },
+  "liquid": {
+    "glyph": "",
+    "color": "green"
+  },
+  "styl": {
+    "glyph": "",
+    "color": "green"
+  },
+  "csv": {
+    "glyph": "",
+    "color": "green"
+  },
+  "graphql": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "gql": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "ini": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "conf": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "cfg": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "diff": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "patch": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "http": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "d.ts": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "tex": {
+    "glyph": "",
+    "color": "green"
+  },
+  "org": {
+    "glyph": "",
+    "color": "cyan"
+  },
+  "cmake": {
+    "glyph": "",
+    "color": "grey"
+  },
+  "zip": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "7z": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "gz": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "bz2": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "rar": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "xz": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "tgz": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "zst": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "ttf": {
+    "glyph": "",
+    "color": "white"
+  },
+  "otf": {
+    "glyph": "",
+    "color": "white"
+  },
+  "woff": {
+    "glyph": "",
+    "color": "white"
+  },
+  "woff2": {
+    "glyph": "",
+    "color": "white"
+  },
+  "db": {
+    "glyph": "",
+    "color": "white"
+  },
+  "sqlite": {
+    "glyph": "",
+    "color": "white"
+  },
+  "sqlite3": {
+    "glyph": "",
+    "color": "white"
+  },
+  "exe": {
+    "glyph": "",
+    "color": "red"
+  },
+  "bin": {
+    "glyph": "",
+    "color": "red"
+  },
+  "bmp": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "psd": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "jxl": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "bak": {
+    "glyph": "󰁯",
+    "color": "grey"
+  },
+  "rss": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "tmux": {
+    "glyph": "",
+    "color": "green"
+  },
+  "bat": {
+    "glyph": "",
+    "color": "green"
+  },
+  "asm": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "s": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "ino": {
+    "glyph": "",
+    "color": "cyan"
+  },
+  "gemspec": {
+    "glyph": "",
+    "color": "red"
+  },
+  "rake": {
+    "glyph": "",
+    "color": "red"
+  },
+  "md5": {
+    "glyph": "󰕥",
+    "color": "grey"
+  },
+  "tmpl": {
+    "glyph": "",
+    "color": "yellow"
   }
 }

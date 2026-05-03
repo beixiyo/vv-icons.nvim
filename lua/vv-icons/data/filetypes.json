@@ -2,5 +2,205 @@
   "html": {
     "glyph": "󰌝",
     "color": "red"
+  },
+  "typescript": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "javascript": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "typescriptreact": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "javascriptreact": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "python": {
+    "glyph": "",
+    "color": "green"
+  },
+  "rust": {
+    "glyph": "",
+    "color": "white"
+  },
+  "lua": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "go": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "ruby": {
+    "glyph": "",
+    "color": "red"
+  },
+  "php": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "java": {
+    "glyph": "",
+    "color": "red"
+  },
+  "c": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "cpp": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "cs": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "css": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "scss": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "sass": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "less": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "json": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "yaml": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "toml": {
+    "glyph": "",
+    "color": "white"
+  },
+  "xml": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "markdown": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "vim": {
+    "glyph": "",
+    "color": "green"
+  },
+  "sh": {
+    "glyph": "",
+    "color": "green"
+  },
+  "zsh": {
+    "glyph": "",
+    "color": "green"
+  },
+  "bash": {
+    "glyph": "󱆃",
+    "color": "green"
+  },
+  "fish": {
+    "glyph": "",
+    "color": "green"
+  },
+  "sql": {
+    "glyph": "",
+    "color": "cyan"
+  },
+  "dart": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "kotlin": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "scala": {
+    "glyph": "",
+    "color": "red"
+  },
+  "swift": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "elixir": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "erlang": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "haskell": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "clojure": {
+    "glyph": "",
+    "color": "green"
+  },
+  "vue": {
+    "glyph": "",
+    "color": "green"
+  },
+  "svelte": {
+    "glyph": "",
+    "color": "red"
+  },
+  "astro": {
+    "glyph": "",
+    "color": "red"
+  },
+  "graphql": {
+    "glyph": "",
+    "color": "magenta"
+  },
+  "dockerfile": {
+    "glyph": "󰡨",
+    "color": "blue"
+  },
+  "terraform": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "nix": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "zig": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "ocaml": {
+    "glyph": "",
+    "color": "orange"
+  },
+  "tex": {
+    "glyph": "",
+    "color": "green"
+  },
+  "r": {
+    "glyph": "󰟔",
+    "color": "blue"
+  },
+  "julia": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "prisma": {
+    "glyph": "",
+    "color": "purple"
   }
 }

@@ -432,5 +432,155 @@
     "match": "proto",
     "glyph": "󰿘",
     "color": "grey"
+  },
+  {
+    "match": "{auth,authentication}",
+    "glyph": "󰍁",
+    "color": "yellow"
+  },
+  {
+    "match": "constants",
+    "glyph": "󰍂",
+    "color": "orange"
+  },
+  {
+    "match": "{decorator,decorators}",
+    "glyph": "󰑳",
+    "color": "purple"
+  },
+  {
+    "match": "{dto,dtos}",
+    "glyph": "󰇚",
+    "color": "blue"
+  },
+  {
+    "match": "{entity,entities}",
+    "glyph": "󰩮",
+    "color": "green"
+  },
+  {
+    "match": "{enum,enums}",
+    "glyph": "",
+    "color": "orange"
+  },
+  {
+    "match": "{exception,exceptions}",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "{function,functions}",
+    "glyph": "󰊕",
+    "color": "purple"
+  },
+  {
+    "match": "{generated,gen}",
+    "glyph": "󰙴",
+    "color": "grey"
+  },
+  {
+    "match": "{guard,guards}",
+    "glyph": "󰔡",
+    "color": "yellow"
+  },
+  {
+    "match": "{interceptor,interceptors}",
+    "glyph": "󰬠",
+    "color": "orange"
+  },
+  {
+    "match": "internal",
+    "glyph": "󰈽",
+    "color": "grey"
+  },
+  {
+    "match": "{mapper,mappers}",
+    "glyph": "󰍴",
+    "color": "blue"
+  },
+  {
+    "match": "{notification,notifications}",
+    "glyph": "󰂚",
+    "color": "orange"
+  },
+  {
+    "match": "{pipe,pipes}",
+    "glyph": "󰢉",
+    "color": "cyan"
+  },
+  {
+    "match": "{repository,repositories}",
+    "glyph": "",
+    "color": "green"
+  },
+  {
+    "match": "{resolver,resolvers}",
+    "glyph": "󰄴",
+    "color": "blue"
+  },
+  {
+    "match": "{resource,resources}",
+    "glyph": "󰞜",
+    "color": "green"
+  },
+  {
+    "match": "sdk",
+    "glyph": "󱈟",
+    "color": "blue"
+  },
+  {
+    "match": "security",
+    "glyph": "󰒃",
+    "color": "yellow"
+  },
+  {
+    "match": "{template,templates}",
+    "glyph": "",
+    "color": "cyan"
+  },
+  {
+    "match": "{validator,validators,validation}",
+    "glyph": "󰱺",
+    "color": "green"
+  },
+  {
+    "match": "{.vercel,vercel}",
+    "glyph": "",
+    "color": "white"
+  },
+  {
+    "match": ".netlify",
+    "glyph": "",
+    "color": "cyan"
+  },
+  {
+    "match": ".terraform",
+    "glyph": "󱁢",
+    "color": "purple"
+  },
+  {
+    "match": "prisma",
+    "glyph": "",
+    "color": "purple"
+  },
+  {
+    "match": "supabase",
+    "glyph": "",
+    "color": "green"
+  },
+  {
+    "match": "storybook",
+    "glyph": "",
+    "color": "magenta"
+  },
+  {
+    "match": "__mocks__",
+    "glyph": "",
+    "color": "yellow"
+  },
+  {
+    "match": "{snapshot,snapshots,__snapshots__}",
+    "glyph": "󰙨",
+    "color": "grey"
   }
 ]

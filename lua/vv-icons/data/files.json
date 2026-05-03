@@ -293,5 +293,120 @@
     "match": ".python-version",
     "glyph": "",
     "color": "green"
+  },
+  {
+    "match": "CHANGELOG{,.md}",
+    "glyph": "󰂺",
+    "color": "yellow"
+  },
+  {
+    "match": "vercel.json",
+    "glyph": "",
+    "color": "white"
+  },
+  {
+    "match": "{wrangler.toml,wrangler.jsonc}",
+    "glyph": "",
+    "color": "orange"
+  },
+  {
+    "match": "robots.txt",
+    "glyph": "󰚩",
+    "color": "grey"
+  },
+  {
+    "match": ".gitlab-ci.yml",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "svelte.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "astro.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "commitlint.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "󰜘",
+    "color": "green"
+  },
+  {
+    "match": ".pre-commit-config.yaml",
+    "glyph": "󰛢",
+    "color": "yellow"
+  },
+  {
+    "match": "{tmux.conf,.tmux.conf}",
+    "glyph": "",
+    "color": "green"
+  },
+  {
+    "match": "Vagrantfile",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": "Jenkinsfile",
+    "glyph": "",
+    "color": "red"
+  },
+  {
+    "match": "{.stylua.toml,stylua.toml}",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": ".luarc.json",
+    "glyph": "",
+    "color": "blue"
+  },
+  {
+    "match": "netlify.toml",
+    "glyph": "",
+    "color": "cyan"
+  },
+  {
+    "match": "fly.toml",
+    "glyph": "",
+    "color": "purple"
+  },
+  {
+    "match": "prisma.config.{mts,ts}",
+    "glyph": "",
+    "color": "purple"
+  },
+  {
+    "match": "drizzle.config.{cjs,mjs,js,cts,mts,ts}",
+    "glyph": "",
+    "color": "green"
+  },
+  {
+    "match": ".swcrc",
+    "glyph": "",
+    "color": "orange"
+  },
+  {
+    "match": "Taskfile{,.dist}.{yml,yaml}",
+    "glyph": "",
+    "color": "purple"
+  },
+  {
+    "match": "CLAUDE.md",
+    "glyph": "󰺹",
+    "color": "orange"
+  },
+  {
+    "match": ".cursorrules",
+    "glyph": "",
+    "color": "white"
+  },
+  {
+    "match": "favicon.ico",
+    "glyph": "",
+    "color": "yellow"
   }
 ]
