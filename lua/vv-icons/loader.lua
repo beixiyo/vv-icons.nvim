@@ -99,12 +99,12 @@ local function read_json(name)
   local path = DATA_DIR .. name .. '.json'
   local ok_read, content = pcall(vim.fn.readfile, path)
   if not ok_read then
-    vim.notify('[vv-icons] 无法读取 ' .. path, vim.log.levels.WARN)
+    vim.notify('[vv-icons] Failed to read ' .. path, vim.log.levels.WARN)
     return {}
   end
   local ok_parse, data = pcall(vim.json.decode, table.concat(content, '\n'))
   if not ok_parse then
-    vim.notify('[vv-icons] JSON 解析失败 ' .. path .. ': ' .. tostring(data), vim.log.levels.WARN)
+    vim.notify('[vv-icons] JSON parse failed ' .. path .. ': ' .. tostring(data), vim.log.levels.WARN)
     return {}
   end
   return data
