@@ -1,11 +1,12 @@
 -- 统一图标导出。所有数据源在 data/*.json，loader 负责读取并映射高亮组。
--- 唯一例外：diagnostics 用 DiagnosticError/Warn/Hint/Info 高亮组（跟 colorscheme），保留手写 lua
+-- 唯一例外：diagnostics / kinds 直接手写 lua（hl 跟 colorscheme，不走 JSON）
 --
 -- 暴露形态：
---   1. 扁平 glyph：icons.find_file / icons.git_status / icons.diagnostics_error
---   2. 命名空间 glyph 表：icons.ns.ui / icons.ns.git / icons.ns.diagnostics / icons.ns.kinds
---   3. 原始 {glyph,hl} 表：icons.raw.<name>
---   4. mini.icons setup 直接吃的字典：icons.files / icons.directories / icons.extensions / icons.filetypes
+--   icons.get(category, name)      → icon, hl, is_default  统一查询，对齐 MiniIcons.get()
+--   icons.xxx                      → glyph string          扁平访问（ui + git + diagnostics 合并）
+--   icons.ns.ui / .git / ...       → { key = glyph }       按命名空间取 glyph
+--   icons.raw.ui / .git / ...      → { key = {glyph,hl} }  原始 entry（需要 hl 时用）
+--   icons.files / .directories / … → { name = {glyph,hl} } 传给 MiniIcons.setup() 的字典
 
 ---@alias VVIconCategory 'file'|'directory'|'extension'|'filetype'|'ui'|'git'|'diagnostics'|'kinds'
 
@@ -26,6 +27,7 @@ local git_raw         = L.load_dict("git")
 local diagnostics_raw = require("vv-icons.diagnostics")
 local kinds_raw       = require("vv-icons.kinds")
 
+--- { key = { glyph, hl } }  →  { key = glyph }
 ---@param tbl table<string, VVIconEntry>
 ---@return table<string, string>
 local function flatten(tbl)
@@ -51,7 +53,7 @@ M.ns = {
   kinds       = kinds,
 }
 
--- 扁平合并；放最后，让字符串覆盖任何同名命名空间
+-- 扁平合并到 M：icons.git_modified → glyph string（ui + git + diagnostics 的 key 全部提升到顶层）
 for _, tbl in ipairs({ ui, git, diagnostics }) do
   for k, v in pairs(tbl) do M[k] = v end
 end
@@ -72,6 +74,7 @@ M.filetypes   = L.load_dict("filetypes")
 local MI_CATEGORIES = { file = true, directory = true, extension = true, filetype = true }
 
 --- 统一查询入口，返回值对齐 MiniIcons.get()
+--- ui/git/diagnostics/kinds → 查 raw 表；file/directory/extension/filetype → 委托 MiniIcons（含大小写回退）
 ---@param category VVIconCategory
 ---@param name string
 ---@return string? icon, string? hl, boolean is_default
