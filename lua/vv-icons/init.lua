@@ -77,16 +77,51 @@ local MI_CATEGORIES = { file = true, directory = true, extension = true, filetyp
 --- ui/git/diagnostics/kinds → 查 raw 表；file/directory/extension/filetype → 委托 MiniIcons（含大小写回退）
 ---@param category VVIconCategory
 ---@param name string
+---@param opts? { open?: boolean, empty?: boolean }
 ---@return string? icon, string? hl, boolean is_default
-function M.get(category, name)
+function M.get(category, name, opts)
   local raw_tbl = M.raw[category]
   if raw_tbl then
     local entry = raw_tbl[name]
-    if entry then return entry.glyph, entry.hl, false end
+    if entry then
+      local glyph = (opts and opts.open and entry.open_glyph) or entry.glyph
+      return glyph, entry.hl, false
+    end
     return nil, nil, true
   end
 
   if MI_CATEGORIES[category] then
+    -- 目录状态逻辑
+    if category == "directory" and opts then
+      local entry = M.directories[name]
+      if not entry and name:lower() ~= name then entry = M.directories[name:lower()] end
+
+      -- 1. 空目录优先
+      if opts.empty then
+        local folder_empty = M.raw.ui.folder_empty
+        if folder_empty then
+          return folder_empty.glyph, (entry and entry.hl), false
+        end
+      end
+
+      -- 2. 展开态逻辑
+      if opts.open then
+        if entry and entry.open_glyph then
+          return entry.open_glyph, entry.hl, false
+        end
+        -- 如果是特定目录图标（如 test），不强制换成 folder_open
+        if entry and entry.glyph then
+          return entry.glyph, entry.hl, false
+        end
+        -- 全局展开 fallback
+        local folder_open = M.raw.ui.folder_open
+        if folder_open then
+          -- 注意：这里 hl 返回 nil，让插件 fallback 到自己的 VVExplorerDir
+          return folder_open.glyph, (entry and entry.hl), false
+        end
+      end
+    end
+
     local mi = _G.MiniIcons
     if mi then
       local icon, hl, is_default = mi.get(category, name)

@@ -336,6 +336,7 @@
   },
   {
     "match": "src",
+    "open_glyph": "󰝰",
     "color": "purple"
   },
   {
@@ -396,7 +397,7 @@
   {
     "match": "{svg,svgs}",
     "glyph": "󰜡",
-    "color": "cyan"
+    "color": "yellow"
   },
   {
     "match": "icons",

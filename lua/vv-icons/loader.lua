@@ -121,6 +121,7 @@ function M.load_dict(name)
   for key, entry in pairs(raw) do
     local v = {}
     if entry.glyph then v.glyph = entry.glyph end
+    if entry.open_glyph then v.open_glyph = entry.open_glyph end
     if entry.color then v.hl = color_to_hl(entry.color) end
     out[key] = v
   end
@@ -139,6 +140,7 @@ function M.load_files(name)
   for i = #raw, 1, -1 do
     local entry = raw[i]
     local value = { glyph = entry.glyph, hl = color_to_hl(entry.color) }
+    if entry.open_glyph then value.open_glyph = entry.open_glyph end
     for _, literal in ipairs(M.expand_braces(entry.match)) do
       out[literal] = value
     end

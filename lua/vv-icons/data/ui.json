@@ -160,7 +160,21 @@
     "color": "yellow"
   },
   "explorer": {
-    "glyph": "󰉓",
+    "glyph": "󰉋",
+    "open_glyph": "󰝰",
+    "color": "yellow"
+  },
+  "folder": {
+    "glyph": "󰉋",
+    "open_glyph": "󰝰",
+    "color": "yellow"
+  },
+  "folder_open": {
+    "glyph": "󰝰",
+    "color": "yellow"
+  },
+  "folder_empty": {
+    "glyph": "󰉖",
     "color": "yellow"
   },
   "list": {
