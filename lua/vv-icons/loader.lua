@@ -9,6 +9,7 @@
 
 ---@class VVIconEntry
 ---@field glyph? string
+---@field open_glyph? string
 ---@field hl? string
 
 ---@class VVIconsLoader
