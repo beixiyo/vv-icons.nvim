@@ -140,10 +140,28 @@ function M.load_files(name)
   local out = {}
   for i = #raw, 1, -1 do
     local entry = raw[i]
-    local value = { glyph = entry.glyph, hl = color_to_hl(entry.color) }
-    if entry.open_glyph then value.open_glyph = entry.open_glyph end
-    for _, literal in ipairs(M.expand_braces(entry.match)) do
-      out[literal] = value
+    -- 单条畸形数据（缺 match / brace 不匹配）只跳过该条并告警，不向上抛穿打挂整个 require
+    -- 与 read_json 的容错层级保持一致，真正兑现『单条坏数据不阻断 require』
+    if entry.match == nil then
+      vim.notify(
+        string.format('[vv-icons] %s[%d] 缺少 match 字段，已跳过该条', name, i),
+        vim.log.levels.WARN
+      )
+    else
+      local ok_expand, literals = pcall(M.expand_braces, entry.match)
+      if not ok_expand then
+        vim.notify(
+          string.format('[vv-icons] %s match=%s brace 展开失败，已跳过该条: %s',
+            name, tostring(entry.match), tostring(literals)),
+          vim.log.levels.WARN
+        )
+      else
+        local value = { glyph = entry.glyph, hl = color_to_hl(entry.color) }
+        if entry.open_glyph then value.open_glyph = entry.open_glyph end
+        for _, literal in ipairs(literals) do
+          out[literal] = value
+        end
+      end
     end
   end
   return out
@@ -158,12 +176,18 @@ function M.load_directories(name)
   local out = M.load_files(name)
   local extras = {}
   for key, value in pairs(out) do
-    if key:sub(-1) == 's' and key:sub(-2) ~= 'ss' and #key > 3 then
-      local singular = key:sub(1, -2)
-      if not out[singular] then extras[singular] = value end
-    else
-      local plural = key .. 's'
-      if not out[plural] then extras[plural] = value end
+    -- 跳过条件独立成 guard：≤3 字符 或 'ss' 结尾的词不生成单复数变体，
+    -- 否则会落入加 's' 的旧 else 分支造出 csss/ioss/k8ss/srcs/scsss/cypresss 等永不命中的垃圾键
+    if #key > 3 and key:sub(-2) ~= 'ss' then
+      if key:sub(-1) == 's' then
+        -- s 结尾 → 去 s 生成单数（charts→chart、uploads→upload）
+        local singular = key:sub(1, -2)
+        if not out[singular] then extras[singular] = value end
+      else
+        -- 非 s 结尾 → 加 s 生成复数（source→sources）
+        local plural = key .. 's'
+        if not out[plural] then extras[plural] = value end
+      end
     end
   end
   for k, v in pairs(extras) do out[k] = v end

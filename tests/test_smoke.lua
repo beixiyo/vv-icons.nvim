@@ -86,6 +86,90 @@ test('require("vv-icons") 整体不崩溃', function()
   assert(type(icons) == 'table', '返回值不是 table')
 end)
 
+-- 测试 3: #63 kinds 顶层暴露（blink kind_icons）
+print('\n[3] #63 icons.kinds 顶层可取')
+
+test('require("vv-icons").kinds 是有效表且与 ns.kinds 同引用', function()
+  for _, m in ipairs({ 'vv-icons', 'vv-icons.loader', 'vv-icons.diagnostics', 'vv-icons.kinds' }) do
+    package.loaded[m] = nil
+  end
+  local icons = require('vv-icons')
+  assert(type(icons.kinds) == 'table', 'icons.kinds 不是 table（#63 未修复时为 nil）')
+  assert(icons.kinds == icons.ns.kinds, 'icons.kinds 应与 icons.ns.kinds 同引用')
+  assert(next(icons.kinds) ~= nil, 'icons.kinds 为空表')
+end)
+
+test('kinds 的值是 glyph 字符串（blink kind_icons 需要 name→glyph）', function()
+  local icons = require('vv-icons')
+  assert(type(icons.kinds.Function) == 'string' and icons.kinds.Function ~= '', 'Function 不是非空 glyph 字符串')
+  assert(type(icons.kinds.Method) == 'string', 'Method 不是字符串')
+  assert(type(icons.kinds.Class) == 'string', 'Class 不是字符串')
+end)
+
+test('kinds 未污染顶层（Pascal 键不应扁平展开到 M）', function()
+  local icons = require('vv-icons')
+  assert(icons.Function == nil, '顶层 icons.Function 应为 nil（kinds 不该扁平展开污染顶层）')
+  assert(icons.Method == nil, '顶层 icons.Method 应为 nil')
+end)
+
+-- 测试 4: #65 load_directories 单复数 guard
+print('\n[4] #65 load_directories 不生成垃圾单复数键')
+
+test('≤3 字符 / ss 结尾不生成垃圾变体键', function()
+  package.loaded['vv-icons.loader'] = nil
+  local d = require('vv-icons.loader').load_directories('directories')
+  for _, k in ipairs({ 'csss', 'ioss', 'k8ss', 'srcs', 'scsss', 'cypresss', 'uis' }) do
+    assert(d[k] == nil, '不该生成垃圾键: ' .. k)
+  end
+end)
+
+test('合法单复数变体仍保留，原始键不丢失', function()
+  local d = require('vv-icons.loader').load_directories('directories')
+  for _, k in ipairs({ 'chart', 'upload', 'download', 'sources', 'event', 'task' }) do
+    assert(d[k] ~= nil, '合法变体丢失: ' .. k)
+  end
+  for _, k in ipairs({ 'css', 'ios', 'k8s', 'src', 'scss', 'cypress', 'ui' }) do
+    assert(d[k] ~= nil, '原始键丢失: ' .. k)
+  end
+end)
+
+-- 测试 5: #64 单条畸形 JSON 不阻断 require
+print('\n[5] #64 畸形 entry 不炸 require')
+
+-- 拷贝到临时目录注入畸形 files.json 条目，require 仍应成功（其余图标正常）
+local function require_from_copy_with_bad_files(bad_entry)
+  local tmp = vim.fn.tempname()
+  vim.fn.mkdir(tmp .. '/lua', 'p')
+  local rc = vim.fn.system({ 'cp', '-r', plugin_root .. '/lua/vv-icons', tmp .. '/lua/vv-icons' })
+  if vim.v.shell_error ~= 0 then error('cp 失败: ' .. tostring(rc)) end
+
+  local fjson = tmp .. '/lua/vv-icons/data/files.json'
+  local content = table.concat(vim.fn.readfile(fjson), '\n')
+  content = content:gsub('%[', '[\n  ' .. bad_entry .. ',', 1)
+  vim.fn.writefile(vim.split(content, '\n'), fjson)
+
+  local mods = { 'vv-icons', 'vv-icons.loader', 'vv-icons.diagnostics', 'vv-icons.kinds' }
+  for _, m in ipairs(mods) do package.loaded[m] = nil end
+  local saved = package.path
+  package.path = tmp .. '/lua/?.lua;' .. tmp .. '/lua/?/init.lua;' .. package.path
+  local ok, icons = pcall(require, 'vv-icons')
+  package.path = saved
+  for _, m in ipairs(mods) do package.loaded[m] = nil end
+  return ok, icons
+end
+
+test('缺 match 的条目不阻断 require（其余图标正常）', function()
+  local ok, icons = require_from_copy_with_bad_files('{ "glyph": "x", "color": "red" }')
+  assert(ok, '缺 match 应被跳过而非抛错: ' .. tostring(icons))
+  assert(type(icons.files) == 'table' and next(icons.files) ~= nil, '其余 files 图标应正常加载')
+end)
+
+test('括号不匹配的 match 不阻断 require', function()
+  local ok, icons = require_from_copy_with_bad_files('{ "match": "foo{bar", "glyph": "x", "color": "red" }')
+  assert(ok, '未闭合 brace 应被跳过而非抛错: ' .. tostring(icons))
+  assert(type(icons.directories) == 'table' and next(icons.directories) ~= nil, '其余 directories 图标应正常加载')
+end)
+
 -- 汇总
 print(string.format(
   '\n=== 结果: %d 通过, %d 失败 ===\n',

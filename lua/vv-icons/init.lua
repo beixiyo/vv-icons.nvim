@@ -58,6 +58,10 @@ for _, tbl in ipairs({ ui, git, diagnostics }) do
   for k, v in pairs(tbl) do M[k] = v end
 end
 
+-- kinds 的 key 是 Pascal 命名（Function/Method/...）且数量多，不宜扁平展开到顶层造成键污染，
+-- 整表挂到 M.kinds（与 M.ns.kinds 同引用），供 blink.cmp 的 kind_icons 直接消费
+M.kinds = kinds
+
 M.raw = {
   ui          = ui_raw,
   git         = git_raw,
