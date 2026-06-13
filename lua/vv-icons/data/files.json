@@ -371,7 +371,7 @@
   },
   {
     "match": "fly.toml",
-    "glyph": "",
+    "glyph": "",
     "color": "purple"
   },
   {
@@ -391,7 +391,7 @@
   },
   {
     "match": "Taskfile{,.dist}.{yml,yaml}",
-    "glyph": "",
+    "glyph": "󱁤",
     "color": "purple"
   },
   {

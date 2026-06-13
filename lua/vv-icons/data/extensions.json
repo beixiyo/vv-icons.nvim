@@ -580,35 +580,35 @@
     "color": "grey"
   },
   "zip": {
-    "glyph": "",
+    "glyph": "󰗄",
     "color": "orange"
   },
   "7z": {
-    "glyph": "",
+    "glyph": "󰗄",
     "color": "orange"
   },
   "gz": {
-    "glyph": "",
+    "glyph": "󰗄",
     "color": "orange"
   },
   "bz2": {
-    "glyph": "",
+    "glyph": "󰗄",
     "color": "orange"
   },
   "rar": {
-    "glyph": "",
+    "glyph": "󰗄",
     "color": "orange"
   },
   "xz": {
-    "glyph": "",
+    "glyph": "󰗄",
     "color": "orange"
   },
   "tgz": {
-    "glyph": "",
+    "glyph": "󰗄",
     "color": "orange"
   },
   "zst": {
-    "glyph": "",
+    "glyph": "󰗄",
     "color": "orange"
   },
   "ttf": {

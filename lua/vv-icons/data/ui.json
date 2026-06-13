@@ -116,7 +116,7 @@
     "color": "green"
   },
   "markdown": {
-    "glyph": "",
+    "glyph": "󰍔",
     "color": "blue"
   },
   "debug": {
@@ -156,7 +156,7 @@
     "color": "blue"
   },
   "rename": {
-    "glyph": "",
+    "glyph": "󰏫",
     "color": "yellow"
   },
   "explorer": {
@@ -186,11 +186,11 @@
     "color": "blue"
   },
   "fold_open": {
-    "glyph": "",
+    "glyph": "󰅀",
     "color": "grey"
   },
   "fold_closed": {
-    "glyph": "",
+    "glyph": "󰅂",
     "color": "grey"
   },
   "regex": {

@@ -41,7 +41,7 @@
   },
   {
     "match": "{build,dist,out,output}",
-    "glyph": "",
+    "glyph": "󱧼",
     "color": "grey"
   },
   {
@@ -81,7 +81,7 @@
   },
   {
     "match": "bin",
-    "glyph": "",
+    "glyph": "󱧺",
     "color": "grey"
   },
   {
@@ -171,7 +171,7 @@
   },
   {
     "match": "{temp,tmp}",
-    "glyph": "",
+    "glyph": "󰪺",
     "color": "grey"
   },
   {
@@ -546,7 +546,7 @@
   },
   {
     "match": "{.vercel,vercel}",
-    "glyph": "",
+    "glyph": "",
     "color": "white"
   },
   {
