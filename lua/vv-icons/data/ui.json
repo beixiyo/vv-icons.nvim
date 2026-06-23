@@ -186,11 +186,11 @@
     "color": "blue"
   },
   "fold_open": {
-    "glyph": "󰅀",
+    "glyph": "",
     "color": "grey"
   },
   "fold_closed": {
-    "glyph": "󰅂",
+    "glyph": "",
     "color": "grey"
   },
   "regex": {
