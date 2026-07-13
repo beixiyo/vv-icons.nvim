@@ -1,67 +1,67 @@
-<h1 align="center">vv-icons.nvim</h1>
-
-<p align="center">
-  <em>共享图标库 — JSON 存储，Neovim 与 shell 工具共用同一份数据</em>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Neovim-0.10+-57A143?style=flat-square&logo=neovim&logoColor=white" alt="Requires Neovim 0.10+" />
-  <img src="https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white" alt="Lua" />
-  <img src="https://img.shields.io/badge/zero_deps-✓-2ea44f?style=flat-square" alt="Zero Dependencies" />
-</p>
+<div align="center">
+  <h1>vv-icons.nvim</h1>
+  <p>English | <a href="./README.zh-CN.md">中文</a></p>
+  <p>Want my Neovim config? See <a href="https://github.com/beixiyo/dotfiles">dotfiles</a></p>
+  <em>A shared icon library stored as JSON, allowing Neovim and shell tools to consume the same data</em>
+  <p>
+    <img src="https://img.shields.io/badge/Neovim-0.10+-57A143?style=flat-square&logo=neovim&logoColor=white" alt="Requires Neovim 0.10+" />
+    <img src="https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white" alt="Lua" />
+    <img src="https://img.shields.io/badge/zero_deps-✓-2ea44f?style=flat-square" alt="Zero Dependencies" />
+  </p>
+</div>
 
 ---
 
-## 安装
+## Installation
 
 ```lua
 {
   'beixiyo/vv-icons.nvim',
   lazy = false,
-  priority = 1000, -- 其他插件启动期 require('vv-icons') 时需要先就位
+  priority = 1000, -- Must be available when other plugins require('vv-icons') during startup
 }
 ```
 
-无 `setup` / 无 `opts`，纯数据 + 纯函数 loader，加载即用。
+There is no `setup` function or `opts` table. The plugin is a pure data and function loader that is ready immediately after loading.
 
-## 数据文件
+## Data files
 
-| 文件 | 格式 | 说明 |
-|------|------|------|
-| `data/files.json` | 列表型：`{ match, glyph, color }[]` | 按 glob（支持 brace 展开）匹配文件名 |
-| `data/directories.json` | 字典型：`{ name: { glyph?, color? } }` | 目录图标 |
-| `data/extensions.json` | 字典型 | 按扩展名 |
-| `data/filetypes.json` | 字典型 | 按 filetype |
-| `data/git.json` | 字典型 | git status 图标 |
-| `data/ui.json` | 字典型 | 通用 UI 图标 |
+| File | Format | Description |
+|------|--------|-------------|
+| `data/files.json` | List: `{ match, glyph, color }[]` | Matches filenames with globs, including brace expansion |
+| `data/directories.json` | Map: `{ name: { glyph?, color? } }` | Directory icons |
+| `data/extensions.json` | Map | Icons by extension |
+| `data/filetypes.json` | Map | Icons by filetype |
+| `data/git.json` | Map | Git status icons |
+| `data/ui.json` | Map | General UI icons |
 
-## Lua 引用
+## Lua API
 
 ```lua
 local icons = require('vv-icons')
 
--- 扁平 glyph 字符串
+-- Flat glyph strings
 icons.find_file
 
--- 命名空间
+-- Namespaces
 icons.ns.ui
 icons.ns.git
-icons.ns.kinds    -- LSP kind 图标
+icons.ns.kinds    -- LSP kind icons
 
--- 原始 { glyph, hl } 表
+-- Raw { glyph, hl } tables
 icons.raw.ui
 
--- mini.icons 可直接消费的字典
+-- Dictionaries accepted directly by mini.icons
 icons.files
 icons.directories
 icons.extensions
 icons.filetypes
 ```
 
-## 典型消费
+## Typical consumers
 
 ```lua
--- 灌给 mini.icons
+-- Feed the dictionaries to mini.icons
 require('mini.icons').setup({
   file      = require('vv-icons').files,
   directory = require('vv-icons').directories,
@@ -69,12 +69,12 @@ require('mini.icons').setup({
   filetype  = require('vv-icons').filetypes,
 })
 
--- 灌给 blink.cmp / nvim-cmp 的 kind 图标
+-- Kind icons for blink.cmp or nvim-cmp
 local kinds = require('vv-icons').ns.kinds
 ```
 
-## 可选色值
+## Optional colors
 
 `green` / `yellow` / `red` / `blue` / `cyan` / `magenta` / `orange` / `purple` / `grey` / `white`
 
-Lua 侧映射到 `MiniIcons{Color}` 高亮组（由 colorscheme 提供具体色值），shell 侧映射到 256 色 ANSI。
+On the Lua side, colors map to `MiniIcons{Color}` highlight groups whose concrete values are supplied by the colorscheme. Shell consumers map them to the 256-color ANSI palette.
