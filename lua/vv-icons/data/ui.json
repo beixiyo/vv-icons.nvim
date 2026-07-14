@@ -151,6 +151,10 @@
     "glyph": "",
     "color": "orange"
   },
+  "test": {
+    "glyph": "",
+    "color": "green"
+  },
   "buffers": {
     "glyph": "󰈙",
     "color": "blue"
