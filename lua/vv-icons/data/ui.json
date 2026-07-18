@@ -123,6 +123,46 @@
     "glyph": "",
     "color": "red"
   },
+  "debug_breakpoint": {
+    "glyph": "",
+    "color": "red"
+  },
+  "debug_continue": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "debug_pause": {
+    "glyph": "",
+    "color": "yellow"
+  },
+  "debug_step_into": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "debug_step_over": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "debug_step_out": {
+    "glyph": "",
+    "color": "blue"
+  },
+  "debug_restart": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "debug_run_last": {
+    "glyph": "",
+    "color": "purple"
+  },
+  "debug_terminate": {
+    "glyph": "",
+    "color": "red"
+  },
+  "debug_disconnect": {
+    "glyph": "",
+    "color": "grey"
+  },
   "recent_files": {
     "glyph": "",
     "color": "yellow"
