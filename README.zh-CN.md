@@ -29,7 +29,7 @@
 | 文件 | 格式 | 说明 |
 |------|------|------|
 | `data/files.json` | 列表型：`{ match, glyph, color }[]` | 按 glob（支持 brace 展开）匹配文件名 |
-| `data/directories.json` | 字典型：`{ name: { glyph?, color? } }` | 目录图标 |
+| `data/directories.json` | 列表型：`{ match, glyph, color }[]` | 目录图标 |
 | `data/extensions.json` | 字典型 | 按扩展名 |
 | `data/filetypes.json` | 字典型 | 按 filetype |
 | `data/git.json` | 字典型 | git status 图标 |

@@ -29,7 +29,7 @@ There is no `setup` function or `opts` table. The plugin is a pure data and func
 | File | Format | Description |
 |------|--------|-------------|
 | `data/files.json` | List: `{ match, glyph, color }[]` | Matches filenames with globs, including brace expansion |
-| `data/directories.json` | Map: `{ name: { glyph?, color? } }` | Directory icons |
+| `data/directories.json` | List: `{ match, glyph, color }[]` | Directory icons |
 | `data/extensions.json` | Map | Icons by extension |
 | `data/filetypes.json` | Map | Icons by filetype |
 | `data/git.json` | Map | Git status icons |
