@@ -18,7 +18,6 @@
 ---@field directories table<string, VVIconEntry>
 ---@field extensions table<string, VVIconEntry>
 ---@field filetypes table<string, VVIconEntry>
----@field [string] string
 
 local L = require("vv-icons.loader")
 
