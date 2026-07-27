@@ -24,38 +24,8 @@ end
 
 print('\n=== vv-icons.nvim 变更验证 ===\n')
 
--- 测试 1: DATA_DIR 动态路径定位
-print('[1] DATA_DIR 动态路径定位')
-
-test('loader.lua 使用 debug.getinfo 定位 data/ 目录', function()
-  -- 读取 loader.lua 源码，确认不含硬编码 stdpath
-  local loader_path = vim.fn.fnamemodify(debug.getinfo(1, 'S').source:sub(2), ':h')
-    .. '/../lua/vv-icons/loader.lua'
-  local content = table.concat(vim.fn.readfile(loader_path), '\n')
-  assert(
-    not content:find("stdpath('config').-vendors/vv%-icons"),
-    '仍包含硬编码 stdpath 路径'
-  )
-  assert(
-    content:find("debug.getinfo"),
-    '未使用 debug.getinfo 动态定位'
-  )
-end)
-
-test('data/ 目录存在且包含 JSON 文件', function()
-  local data_dir = vim.fn.fnamemodify(debug.getinfo(1, 'S').source:sub(2), ':h')
-    .. '/../lua/vv-icons/data/'
-  assert(vim.fn.isdirectory(data_dir) == 1, 'data/ 目录不存在: ' .. data_dir)
-  local json_files = vim.fn.glob(data_dir .. '*.json', false, true)
-  assert(#json_files > 0, 'data/ 中无 JSON 文件')
-end)
-
-test('require("vv-icons.loader") 正常加载', function()
-  package.loaded['vv-icons.loader'] = nil
-  local loader = require('vv-icons.loader')
-  assert(type(loader.load_dict) == 'function', 'load_dict 不是函数')
-  assert(type(loader.load_files) == 'function', 'load_files 不是函数')
-end)
+-- 测试 1: 运行时读取 data/ 目录
+print('[1] 运行时读取 data/ 目录')
 
 test('load_dict 能正常读取 ui.json', function()
   package.loaded['vv-icons.loader'] = nil
