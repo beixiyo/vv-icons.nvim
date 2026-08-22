@@ -15,10 +15,10 @@ local function test(name, fn)
   local ok, err = pcall(fn)
   if ok then
     passed = passed + 1
-    print('  PASS: ' .. name)
+    print('  通过: ' .. name)
   else
     failed = failed + 1
-    print('  FAIL: ' .. name .. ' -> ' .. tostring(err))
+    print('  失败: ' .. name .. ' -> ' .. tostring(err))
   end
 end
 
@@ -31,7 +31,7 @@ test('load_dict 能正常读取 ui.json', function()
   package.loaded['vv-icons.loader'] = nil
   local loader = require('vv-icons.loader')
   local ui = loader.load_dict('ui')
-  assert(type(ui) == 'table', '返回值不是 table')
+  assert(type(ui) == 'table', '返回值不是表')
   assert(next(ui) ~= nil, 'ui 字典为空')
 end)
 
@@ -42,7 +42,7 @@ test('读取不存在的 JSON 文件返回空表（不抛异常）', function()
   package.loaded['vv-icons.loader'] = nil
   local loader = require('vv-icons.loader')
   local result = loader.load_dict('__nonexistent_test_file__')
-  assert(type(result) == 'table', '返回值不是 table')
+  assert(type(result) == 'table', '返回值不是表')
   assert(next(result) == nil, '应返回空表')
 end)
 
@@ -53,7 +53,7 @@ test('require("vv-icons") 整体不崩溃', function()
   package.loaded['vv-icons.kinds'] = nil
   local ok, icons = pcall(require, 'vv-icons')
   assert(ok, 'require 失败: ' .. tostring(icons))
-  assert(type(icons) == 'table', '返回值不是 table')
+  assert(type(icons) == 'table', '返回值不是表')
 end)
 
 -- 测试 3: #63 kinds 顶层暴露（blink kind_icons）
@@ -64,16 +64,16 @@ test('require("vv-icons").kinds 是有效表且与 ns.kinds 同引用', function
     package.loaded[m] = nil
   end
   local icons = require('vv-icons')
-  assert(type(icons.kinds) == 'table', 'icons.kinds 不是 table（#63 未修复时为 nil）')
+  assert(type(icons.kinds) == 'table', 'icons.kinds 不是表（#63 未修复时为 nil）')
   assert(icons.kinds == icons.ns.kinds, 'icons.kinds 应与 icons.ns.kinds 同引用')
-  assert(next(icons.kinds) ~= nil, 'icons.kinds 为空表')
+  assert(next(icons.kinds) ~= nil, 'icons.kinds 为空')
 end)
 
 test('kinds 的值是 glyph 字符串（blink kind_icons 需要 name→glyph）', function()
   local icons = require('vv-icons')
-  assert(type(icons.kinds.Function) == 'string' and icons.kinds.Function ~= '', 'Function 不是非空 glyph 字符串')
-  assert(type(icons.kinds.Method) == 'string', 'Method 不是字符串')
-  assert(type(icons.kinds.Class) == 'string', 'Class 不是字符串')
+  assert(type(icons.kinds.Function) == 'string' and icons.kinds.Function ~= '', 'Function 键不是非空字符串')
+  assert(type(icons.kinds.Method) == 'string', 'Method 键不是字符串')
+  assert(type(icons.kinds.Class) == 'string', 'Class 键不是字符串')
 end)
 
 test('kinds 未污染顶层（Pascal 键不应扁平展开到 M）', function()
@@ -82,7 +82,7 @@ test('kinds 未污染顶层（Pascal 键不应扁平展开到 M）', function()
   assert(icons.Method == nil, '顶层 icons.Method 应为 nil')
 end)
 
--- 测试 4: #65 load_directories 单复数 guard
+-- 测试 4: #65 load_directories 单复数保护
 print('\n[4] #65 load_directories 不生成垃圾单复数键')
 
 test('≤3 字符 / ss 结尾不生成垃圾变体键', function()
@@ -136,7 +136,7 @@ end)
 
 test('括号不匹配的 match 不阻断 require', function()
   local ok, icons = require_from_copy_with_bad_files('{ "match": "foo{bar", "glyph": "x", "color": "red" }')
-  assert(ok, '未闭合 brace 应被跳过而非抛错: ' .. tostring(icons))
+  assert(ok, '未闭合括号应被跳过而非抛错: ' .. tostring(icons))
   assert(type(icons.directories) == 'table' and next(icons.directories) ~= nil, '其余 directories 图标应正常加载')
 end)
 

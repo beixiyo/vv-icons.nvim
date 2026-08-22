@@ -11,7 +11,7 @@
 ---@alias VVIconCategory 'file'|'directory'|'extension'|'filetype'|'ui'|'git'|'diagnostics'|'kinds'
 
 ---@class VVIcons
----@field get fun(category: VVIconCategory, name: string): string?, string?, boolean
+---@field get fun(category: VVIconCategory, name: string, opts?: { open?: boolean, empty?: boolean }): string?, string?, boolean
 ---@field ns { ui: table<string,string>, git: table<string,string>, diagnostics: table<string,string>, kinds: table<string,string> }
 ---@field raw { ui: table<string,VVIconEntry>, git: table<string,VVIconEntry>, diagnostics: table<string,VVIconEntry>, kinds: table<string,VVIconEntry> }
 ---@field files table<string, VVIconEntry>
