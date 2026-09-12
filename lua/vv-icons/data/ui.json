@@ -1,4 +1,8 @@
 {
+  "link": {
+    "glyph": "",
+    "color": "cyan"
+  },
   "clock": {
     "glyph": "",
     "color": "grey"
