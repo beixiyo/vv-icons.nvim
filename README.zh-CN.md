@@ -82,22 +82,11 @@ Lua 侧映射到 `MiniIcons{Color}` 高亮组（由 colorscheme 提供具体色�
 ## 开发测试
 
 ```sh
-./tests/run.sh
-./tests/run.sh '过滤词'
-# 可选：指定 Neovim
-NVIM_BIN=/path/to/nvim ./tests/run.sh
+./tests/run.sh [literal-filter]
 ```
 
-仅支持 Unix-like 系统；要求 Neovim 0.12+（建议使用 0.12 稳定版）、Git 和 POSIX shell
-直接运行 `./tests/run.sh`，首次自动准备固定版本 vv-utils（`ed9b6ae`）与 mini.test 源码，
-不要求兄弟仓库、个人 Neovim 配置或预装 parser。依赖保存在 `VV_TEST_DEPS_CACHE`，
-默认 `$XDG_CACHE_HOME/nvim-test-deps` 或 `~/.cache/nvim-test-deps`；缓存齐全后可离线运行
-`VV_UTILS` 可显式覆盖共享源码路径；`NVIM_BIN` 默认 `nvim`。过滤词按文件路径或中文用例名
-做字面子串匹配，无匹配视为失败。入口不安装系统工具
+要求 Unix-like 系统、Neovim 0.12+、Git、POSIX shell，以及包含 `dev/test/` 的已有 vv-utils.nvim 源码。入口发现开发集合或已安装源码；`VV_UTILS` 可覆盖路径，`NVIM_BIN` 可指定 Neovim。不读取个人配置，不下载 vv 插件。
 
-每个具名 case 启动全新子 Neovim，不读取个人配置；cwd、HOME、XDG 与临时文件都位于独立 `/tmp`
-父 hook 在断言失败时仍停止子进程并清理 fixture；scheduled 回调异常单独收集后断言
-headless 状态验证不能替代真实终端的视觉和鼠标验证
+套件读取真实图标 JSON，并在临时副本测试畸形条目。utils 仅为测试设施，不是生产依赖。
 
-测试读取真实 JSON，并向临时源码副本注入畸形条目
-旧导出形状断言与实际补全消费者加载合并，不单独制造常量测试
+过滤为字面子串，无匹配非零退出。依赖发现、mini.test 准备与隔离契约见 [共享测试说明](https://github.com/beixiyo/vv-utils.nvim/blob/main/dev/test/README.zh-CN.md)。
